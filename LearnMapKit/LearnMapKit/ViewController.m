@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import <MapKit/MapKit.h>
+#import "YULocationManager.h"
+
+@interface ViewController ()<MKMapViewDelegate>
 
 @end
 
@@ -17,13 +20,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+}
+- (IBAction)locationAction:(UIButton *)sender {
+
+    YULocationManager *manager = [YULocationManager sharedManager];
+//    [manager requestCurrentLocationWithCompletion:^(BOOL success, NSDictionary *locationDictionary, NSError *error) {
+//       
+//        NSLog(@"%@",locationDictionary);
+//    }];
+    
+    [manager requestCurrentGeoCodeAddressWithCompletion:^(BOOL success, NSDictionary *geoCodeDictionary, NSError *error) {
+        
+        NSLog(@"%@",geoCodeDictionary);
+    }];
+
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

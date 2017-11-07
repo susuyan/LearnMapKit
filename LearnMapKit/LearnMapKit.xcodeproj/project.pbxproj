@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A154992E1F4EDBEF0078EB21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BA455E1F4EC631004AAB60 /* MapKit.framework */; };
 		A1BA45271F4D5F08004AAB60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BA45261F4D5F08004AAB60 /* main.m */; };
 		A1BA452A1F4D5F08004AAB60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BA45291F4D5F08004AAB60 /* AppDelegate.m */; };
 		A1BA452D1F4D5F08004AAB60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BA452C1F4D5F08004AAB60 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		A1BA45351F4D5F08004AAB60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA45331F4D5F08004AAB60 /* LaunchScreen.storyboard */; };
 		A1BA45401F4D5F08004AAB60 /* LearnMapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BA453F1F4D5F08004AAB60 /* LearnMapKitTests.m */; };
 		A1BA454B1F4D5F08004AAB60 /* LearnMapKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BA454A1F4D5F08004AAB60 /* LearnMapKitUITests.m */; };
+		A1BA455D1F4E6D5E004AAB60 /* YULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BA455C1F4E6D5E004AAB60 /* YULocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		A1BA45461F4D5F08004AAB60 /* LearnMapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnMapKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BA454A1F4D5F08004AAB60 /* LearnMapKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnMapKitUITests.m; sourceTree = "<group>"; };
 		A1BA454C1F4D5F08004AAB60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BA455B1F4E6D5E004AAB60 /* YULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YULocationManager.h; sourceTree = "<group>"; };
+		A1BA455C1F4E6D5E004AAB60 /* YULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YULocationManager.m; sourceTree = "<group>"; };
+		A1BA455E1F4EC631004AAB60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A154992E1F4EDBEF0078EB21 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				A1BA453E1F4D5F08004AAB60 /* LearnMapKitTests */,
 				A1BA45491F4D5F08004AAB60 /* LearnMapKitUITests */,
 				A1BA45231F4D5F08004AAB60 /* Products */,
+				A1BA45581F4D750B004AAB60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +112,8 @@
 				A1BA45291F4D5F08004AAB60 /* AppDelegate.m */,
 				A1BA452B1F4D5F08004AAB60 /* ViewController.h */,
 				A1BA452C1F4D5F08004AAB60 /* ViewController.m */,
+				A1BA455B1F4E6D5E004AAB60 /* YULocationManager.h */,
+				A1BA455C1F4E6D5E004AAB60 /* YULocationManager.m */,
 				A1BA452E1F4D5F08004AAB60 /* Main.storyboard */,
 				A1BA45311F4D5F08004AAB60 /* Assets.xcassets */,
 				A1BA45331F4D5F08004AAB60 /* LaunchScreen.storyboard */,
@@ -138,6 +147,14 @@
 				A1BA454C1F4D5F08004AAB60 /* Info.plist */,
 			);
 			path = LearnMapKitUITests;
+			sourceTree = "<group>";
+		};
+		A1BA45581F4D750B004AAB60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1BA455E1F4EC631004AAB60 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +226,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = DJD38W5HE9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A1BA453A1F4D5F08004AAB60 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -276,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BA455D1F4E6D5E004AAB60 /* YULocationManager.m in Sources */,
 				A1BA452D1F4D5F08004AAB60 /* ViewController.m in Sources */,
 				A1BA452A1F4D5F08004AAB60 /* AppDelegate.m in Sources */,
 				A1BA45271F4D5F08004AAB60 /* main.m in Sources */,
@@ -516,6 +542,7 @@
 				A1BA45511F4D5F08004AAB60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1BA45521F4D5F08004AAB60 /* Build configuration list for PBXNativeTarget "LearnMapKitTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +551,7 @@
 				A1BA45541F4D5F08004AAB60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1BA45551F4D5F08004AAB60 /* Build configuration list for PBXNativeTarget "LearnMapKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +560,7 @@
 				A1BA45571F4D5F08004AAB60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
